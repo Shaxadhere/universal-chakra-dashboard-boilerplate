@@ -3,7 +3,7 @@ import { Select } from 'chakra-react-select'
 import { FormControl, FormErrorMessage, FormLabel } from '@chakra-ui/react'
 import { Controller } from 'react-hook-form'
 
-const FormSelect = ({ label, placeholder, options = [], errors, id, control, required = false, rules }) => {
+const FormSelect = ({ label, placeholder, options = [], errors, id, control, required = false, rules, multiple }) => {
     if (required) {
         required = `${label} is required`
     }
@@ -19,6 +19,7 @@ const FormSelect = ({ label, placeholder, options = [], errors, id, control, req
                 <FormControl isInvalid={errors[id]}>
                     <FormLabel htmlFor={id}>{label}</FormLabel>
                     <Select
+                        isMulti={multiple}
                         onChange={onChange}
                         value={value}
                         ref={ref}

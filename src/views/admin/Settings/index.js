@@ -74,6 +74,7 @@ const Settings = () => {
                 errors={errors}
                 control={control}
                 options={options}
+            // multiple={true}
             />
 
             <FormCheckbox
