@@ -10,11 +10,11 @@ import {
 } from '@chakra-ui/react'
 import FormInput from '../../../components/Forms/FormInput'
 import FormCheckbox from '../../../components/Forms/FormCheckbox'
+import FormSelect from '../../../components/Forms/FormSelect'
 
 const Settings = () => {
     const {
         handleSubmit,
-        register,
         control,
         formState: { errors, isSubmitting },
     } = useForm()
@@ -28,6 +28,17 @@ const Settings = () => {
         })
     }
 
+    const options = [
+        {
+            label: "Some value 1",
+            value: "Some value 1",
+        },
+        {
+            label: "Some value 2",
+            value: "Some value 2",
+        }
+    ]
+
     return (
         <chakra.form onSubmit={handleSubmit(onSubmit)}>
             <FormInput
@@ -36,7 +47,6 @@ const Settings = () => {
                 minLength={5}
                 placeholder="Enter your first name"
                 required={true}
-                register={register}
                 errors={errors}
                 control={control}
             />
@@ -47,12 +57,20 @@ const Settings = () => {
                 minLength={5}
                 placeholder="Enter your last name"
                 required={true}
-                register={register}
                 errors={errors}
                 control={control}
                 rules={{
                     minLength: { value: 3, message: `Minimum length of last name should be 3` },
                 }}
+            />
+            <FormSelect
+                id="selectList"
+                label="Select List"
+                placeholder={'Select option'}
+                required={true}
+                errors={errors}
+                control={control}
+                options={options}
             />
             {/* 
             <FormCheckbox
