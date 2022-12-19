@@ -9,37 +9,37 @@ const Sider = ({ disclosure }) => {
         {
             icon: BsGrid,
             title: "Home",
-            link:"/"
+            link: "/admin"
         },
         {
             icon: BsCardText,
             title: "Articles",
-            link:"/articles"
+            link: "/admin/articles"
         },
         {
             icon: BsCardText,
             title: "Collections",
-            link:"/collections"
+            link: "/admin/collections"
         },
         {
             icon: BsCardText,
             title: "Checklists",
-            link:"/checklists"
+            link: "/admin/checklists"
         },
         {
             icon: BsCardText,
             title: "Integrations",
-            link:"/integrations"
+            link: "/admin/integrations"
         },
         {
             icon: BsCardText,
             title: "Changelog",
-            link:"/changelog"
+            link: "/admin/changelog"
         },
         {
             icon: BsCardText,
             title: "Settings",
-            link:"/settings"
+            link: "/admin/settings"
         }
     ]
 

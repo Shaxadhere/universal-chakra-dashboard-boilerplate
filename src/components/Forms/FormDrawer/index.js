@@ -15,40 +15,44 @@ import {
 const FormDrawer = ({ title, disclosure, size = "xl", id = "drawer-form", onSubmit }) => {
   const { isOpen, onClose } = disclosure
   const firstField = React.useRef()
-  return (
-    <>
 
-      <Drawer
-        size={size}
-        isOpen={isOpen}
-        placement='right'
-        onClose={onClose}
-        initialFocusRef={firstField}
+  const FormContent = () => {
+    return (
+      <chakra.form
+        id={id}
+        onSubmit={onSubmit}
       >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>{title}</DrawerHeader>
+        <Input ref={firstField} placeholder='Type here...' />
+      </chakra.form>
+    )
+  }
+  return (
 
-          <DrawerBody>
-            <chakra.form
-              id={id}
-              onSubmit={onSubmit}
-            >
+    <Drawer
+      size={size}
+      isOpen={isOpen}
+      placement='right'
+      onClose={onClose}
+      initialFocusRef={firstField}
+    >
+      <DrawerOverlay />
+      <DrawerContent>
+        <DrawerCloseButton />
+        <DrawerHeader>{title}</DrawerHeader>
 
-            </chakra.form>
-            <Input ref={firstField} placeholder='Type here...' />
-          </DrawerBody>
+        <DrawerBody>
+          <FormContent />
+        </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant='outline' mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button type='submit' form={id} colorScheme='blue'>Save</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
-    </>
+        <DrawerFooter>
+          <Button variant='outline' mr={3} onClick={onClose}>
+            Cancel
+          </Button>
+          <Button type='submit' form={id} colorScheme='blue'>Save</Button>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
+
   )
 }
 
