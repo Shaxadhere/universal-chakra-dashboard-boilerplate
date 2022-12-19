@@ -50,6 +50,9 @@ const Settings = () => {
                 register={register}
                 errors={errors}
                 control={control}
+                rules={{
+                    minLength: { value: 3, message: `Minimum length of last name should be 3` },
+                }}
             />
             {/* 
             <FormCheckbox

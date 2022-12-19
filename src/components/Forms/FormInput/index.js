@@ -2,7 +2,7 @@ import { FormControl, FormErrorMessage, FormLabel, Input } from '@chakra-ui/reac
 import React from 'react'
 import { Controller } from 'react-hook-form'
 
-const FormInput = ({ label, placeholder, id, required = false, minLength, errors = {}, control }) => {
+const FormInput = ({ label, placeholder, id, required = false, minLength, errors = {}, control, rules }) => {
   if (required) {
     required = `${label} is required`
   }
@@ -11,7 +11,8 @@ const FormInput = ({ label, placeholder, id, required = false, minLength, errors
       control={control}
       name={id}
       rules={{
-        required: required
+        required: required,
+        ...rules
       }}
       render={({ field: { onChange, onBlur, value, ref, ...rest } }) => (
         <FormControl isInvalid={errors[id]}>
