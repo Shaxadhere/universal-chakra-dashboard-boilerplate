@@ -1,41 +1,47 @@
 import { Box, Drawer, DrawerContent, DrawerOverlay, Flex, Text, Icon } from '@chakra-ui/react';
 import React from 'react'
-import { BsCardText,BsGrid } from "react-icons/bs"
+import { BsCardText, BsGrid } from "react-icons/bs"
+import NavItem from './NavItem';
 
 const Sider = ({ disclosure }) => {
-    const NavItem = ({ icon, children, ...rest }) => {
-        return (
-            <Flex
-                align="center"
-                px="4"
-                mx="2"
-                rounded="md"
-                py="3"
-                cursor="pointer"
-                color="primaryText"
-                _hover={{
-                    bg: "secondaryFill",
-                    color: "secondaryText",
-                }}
-                role="group"
-                fontWeight="semibold"
-                transition=".15s ease"
-                {...rest}
-            >
-                {icon && (
-                    <Icon
-                        mr="2"
-                        boxSize="4"
-                        _groupHover={{
-                            color: "primaryText",
-                        }}
-                        as={icon}
-                    />
-                )}
-                {children}
-            </Flex>
-        );
-    };
+
+    const menuList = [
+        {
+            icon: BsGrid,
+            title: "Home",
+            link:"/"
+        },
+        {
+            icon: BsCardText,
+            title: "Articles",
+            link:"/articles"
+        },
+        {
+            icon: BsCardText,
+            title: "Collections",
+            link:"/collections"
+        },
+        {
+            icon: BsCardText,
+            title: "Checklists",
+            link:"/checklists"
+        },
+        {
+            icon: BsCardText,
+            title: "Integrations",
+            link:"/integrations"
+        },
+        {
+            icon: BsCardText,
+            title: "Changelog",
+            link:"/changelog"
+        },
+        {
+            icon: BsCardText,
+            title: "Settings",
+            link:"/settings"
+        }
+    ]
 
     const SidebarContent = (props) => (
         <Box
@@ -55,7 +61,7 @@ const Sider = ({ disclosure }) => {
         >
             <Flex px="4" py="5" align="center">
                 <Text fontSize="2xl" ml="2" color="primaryText" fontWeight="semibold">
-                    Logo
+                    Universal
                 </Text>
             </Flex>
             <Flex
@@ -65,13 +71,14 @@ const Sider = ({ disclosure }) => {
                 color="primaryText"
                 aria-label="Main Navigation"
             >
-                <NavItem icon={BsGrid}>Home</NavItem>
-                <NavItem icon={BsCardText}>Articles</NavItem>
-                <NavItem icon={BsCardText}>Collections</NavItem>
-                <NavItem icon={BsCardText}>Checklists</NavItem>
-                <NavItem icon={BsCardText}>Integrations</NavItem>
-                <NavItem icon={BsCardText}>Changelog</NavItem>
-                <NavItem icon={BsCardText}>Settings</NavItem>
+                {menuList.map((item, index) =>
+                    <NavItem
+                        key={index}
+                        icon={item.icon}
+                        title={item.title}
+                        link={item.link}
+                    />
+                )}
             </Flex>
         </Box>
     );

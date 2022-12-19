@@ -6,16 +6,21 @@ import {
 import ErrorPage from "./error";
 import Dashboard from "../../views/admin/Dashboard"
 import AdminLayout from '../../components/BasicUI/AdminLayout';
+import Settings from '../../views/admin/Settings';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <AdminLayout />,
         errorElement: <ErrorPage />,
-        children:[
+        children: [
             {
-                index:true,
-                element:<Dashboard/>,
+                index: true,
+                element: <Dashboard />,
+            },
+            {
+                path: "/settings",
+                element: <Settings />
             }
         ]
     },

@@ -7,12 +7,12 @@ const Dashboard = () => {
   const formDrawerDisclosure = useDisclosure()
   const data = [
     {
-      name:"Shehzad",
-      age:21,
+      name: "Shehzad",
+      age: 21,
     },
     {
-      name:"Ahmed",
-      age:22,
+      name: "Ahmed",
+      age: 22,
     }
   ]
   return (
