@@ -13,6 +13,7 @@ import FormCheckbox from '../../../components/Forms/FormCheckbox'
 import FormSelect from '../../../components/Forms/FormSelect'
 import FormRadio from '../../../components/Forms/FormRadio'
 import FormSwitch from '../../../components/Forms/FormSwitch'
+import FormTextarea from '../../../components/Forms/FormTextarea'
 
 const Settings = () => {
     const {
@@ -98,6 +99,14 @@ const Settings = () => {
             <FormSwitch
                 id={"SwitchInput"}
                 label={"Switch Input"}
+                required={true}
+                errors={errors}
+                control={control}
+            />
+
+            <FormTextarea
+                id={"TextareaInput"}
+                label={"Textarea Input"}
                 required={true}
                 errors={errors}
                 control={control}

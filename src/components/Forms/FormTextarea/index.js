@@ -1,11 +1,11 @@
 import React from 'react'
-import { FormControl, FormErrorMessage, FormLabel, Switch } from '@chakra-ui/react'
+import { FormControl, FormErrorMessage, FormLabel, Textarea } from '@chakra-ui/react'
 import { Controller } from 'react-hook-form'
 
-const FormSwitch = ({ control, label, id, required, rules, errors }) => {
+const FormTextarea = ({ id, label, control, errors, required, rules }) => {
     if (required) {
         required = `${label} is required`
-      }
+    }
     return (
         <Controller
             control={control}
@@ -19,7 +19,15 @@ const FormSwitch = ({ control, label, id, required, rules, errors }) => {
                     <FormLabel htmlFor={id} mb='0'>
                         {label}
                     </FormLabel>
-                    <Switch id={id} onChange={onChange} onBlur={onBlur} value={value} ref={ref} {...rest} />
+                    <Textarea
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        value={value}
+                        ref={ref}
+                        placeholder='Here is a sample placeholder'
+                        size='sm'
+                        {...rest}
+                    />
                     <FormErrorMessage>
                         {errors[id] && errors[id].message}
                     </FormErrorMessage>
@@ -29,4 +37,4 @@ const FormSwitch = ({ control, label, id, required, rules, errors }) => {
     )
 }
 
-export default FormSwitch
+export default FormTextarea

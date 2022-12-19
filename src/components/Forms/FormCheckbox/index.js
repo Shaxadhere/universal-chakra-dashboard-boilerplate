@@ -3,6 +3,9 @@ import { Checkbox, CheckboxGroup, FormControl, FormErrorMessage, FormLabel, Stac
 import { Controller } from 'react-hook-form'
 
 const FormCheckbox = ({ options, defaultChecked, label, errors = {}, id, required = false, control, rules }) => {
+    if (required) {
+        required = `${label} is required`
+      }
     return (
         <Controller
             control={control}

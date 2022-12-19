@@ -3,6 +3,9 @@ import { FormControl, FormErrorMessage, FormLabel, Radio, RadioGroup, Stack } fr
 import { Controller } from 'react-hook-form'
 
 const FormRadio = ({ options, defaultValue, label, errors = {}, id, required = false, control, rules }) => {
+    if (required) {
+        required = `${label} is required`
+      }
     return (
         <Controller
             control={control}
