@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import {
     FormErrorMessage,
     FormLabel,
@@ -9,11 +9,13 @@ import {
     chakra
 } from '@chakra-ui/react'
 import FormInput from '../../../components/Forms/FormInput'
+import FormCheckbox from '../../../components/Forms/FormCheckbox'
 
 const Settings = () => {
     const {
         handleSubmit,
         register,
+        control,
         formState: { errors, isSubmitting },
     } = useForm()
 
@@ -36,6 +38,7 @@ const Settings = () => {
                 required={true}
                 register={register}
                 errors={errors}
+                control={control}
             />
 
             <FormInput
@@ -46,7 +49,47 @@ const Settings = () => {
                 required={true}
                 register={register}
                 errors={errors}
+                control={control}
             />
+            {/* 
+            <FormCheckbox
+                id={"CheckboxInput"}
+                label={"Select"}
+                required={true}
+                register={register}
+                errors={errors}
+                options={["sasuke", "naruto", "kakashi"]}
+                defaultChecked={['naruto', 'kakashi']}
+            /> */}
+
+
+            {/* <Controller
+                control={control}
+                name="example"
+                rules={{
+                    required: "This field is required!"
+                }}
+                render={({ field: { onChange, onBlur, value, ref, ...rest } }) => (
+                    <FormControl isInvalid={errors.example}>
+                        <FormLabel htmlFor={"email"}>Example</FormLabel>
+                        <Input
+                            value={value}
+                            onChange={onChange}
+                            onBlur={onBlur}
+                            ref={ref}
+                            placeholder="Example field"
+                            id="email"
+                            {...rest}
+                        />
+                        <FormErrorMessage>
+                            {errors.example && errors.example.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                )}
+            /> */}
+
+
+
 
             <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
                 Submit
