@@ -14,6 +14,7 @@ import FormSelect from '../../../components/Forms/FormSelect'
 import FormRadio from '../../../components/Forms/FormRadio'
 import FormSwitch from '../../../components/Forms/FormSwitch'
 import FormTextarea from '../../../components/Forms/FormTextarea'
+import CustomAlert from '../../../components/BasicUI/CustomAlert'
 
 const Settings = () => {
     const {
@@ -44,6 +45,13 @@ const Settings = () => {
 
     return (
         <chakra.form onSubmit={handleSubmit(onSubmit)}>
+
+            <CustomAlert
+                type="success"
+                title="Your browser is outdated!"
+                description={"Your Chakra experience may be degraded."}
+            />
+
             <FormInput
                 id={"firstName"}
                 label="First Name"
