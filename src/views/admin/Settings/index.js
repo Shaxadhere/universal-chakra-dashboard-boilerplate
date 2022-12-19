@@ -11,6 +11,8 @@ import {
 import FormInput from '../../../components/Forms/FormInput'
 import FormCheckbox from '../../../components/Forms/FormCheckbox'
 import FormSelect from '../../../components/Forms/FormSelect'
+import FormRadio from '../../../components/Forms/FormRadio'
+import FormSwitch from '../../../components/Forms/FormSwitch'
 
 const Settings = () => {
     const {
@@ -72,42 +74,34 @@ const Settings = () => {
                 control={control}
                 options={options}
             />
-            {/* 
+
             <FormCheckbox
                 id={"CheckboxInput"}
                 label={"Select"}
                 required={true}
-                register={register}
                 errors={errors}
                 options={["sasuke", "naruto", "kakashi"]}
                 defaultChecked={['naruto', 'kakashi']}
-            /> */}
-
-
-            {/* <Controller
                 control={control}
-                name="example"
-                rules={{
-                    required: "This field is required!"
-                }}
-                render={({ field: { onChange, onBlur, value, ref, ...rest } }) => (
-                    <FormControl isInvalid={errors.example}>
-                        <FormLabel htmlFor={"email"}>Example</FormLabel>
-                        <Input
-                            value={value}
-                            onChange={onChange}
-                            onBlur={onBlur}
-                            ref={ref}
-                            placeholder="Example field"
-                            id="email"
-                            {...rest}
-                        />
-                        <FormErrorMessage>
-                            {errors.example && errors.example.message}
-                        </FormErrorMessage>
-                    </FormControl>
-                )}
-            /> */}
+            />
+
+            <FormRadio
+                id={"RadioInput"}
+                label={"Radio Input"}
+                required={true}
+                errors={errors}
+                options={["sasuke", "naruto", "kakashi"]}
+                defaultValue={'kakashi'}
+                control={control}
+            />
+
+            <FormSwitch
+                id={"SwitchInput"}
+                label={"Switch Input"}
+                required={true}
+                errors={errors}
+                control={control}
+            />
 
 
 
