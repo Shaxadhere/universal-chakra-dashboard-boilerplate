@@ -1,6 +1,7 @@
 # React JS Chakra UI Dashboard Boilerplate
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+More features wll be added to this project soon.
 
 ## Folder Structure
 ```
