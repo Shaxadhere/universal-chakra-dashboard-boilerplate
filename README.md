@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Folder Structure
+```
  |-- src
      |-- assets
         |--  images
@@ -48,6 +49,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
              |-- Profile
         index.css
         index.js
+```
 
 ## How To Run
 
