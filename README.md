@@ -53,10 +53,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How To Run
 ```
-`git clone https://github.com/Shaxadhere/universal-chakra-dashboard-boilerplate`
-`cd universal-chakra-dashboard-boilerplate`
-`npm install`
-`npm start`
+git clone https://github.com/Shaxadhere/universal-chakra-dashboard-boilerplate
+cd universal-chakra-dashboard-boilerplate
+npm install
+npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
