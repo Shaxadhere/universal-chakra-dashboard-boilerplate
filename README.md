@@ -48,7 +48,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
         Profile
     index.css
     index.js
-
+`
 ## How To Run
 
 ## `git clone https://github.com/Shaxadhere/universal-chakra-dashboard-boilerplate`
