@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Folder Structure
-`src
+src
     assets
       images
     components
@@ -48,13 +48,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
         Profile
     index.css
     index.js
-`
+
 ## How To Run
 
-## `git clone https://github.com/Shaxadhere/universal-chakra-dashboard-boilerplate`
-## `cd universal-chakra-dashboard-boilerplate`
-## `npm install`
-### `npm start`
+`git clone https://github.com/Shaxadhere/universal-chakra-dashboard-boilerplate`
+`cd universal-chakra-dashboard-boilerplate`
+`npm install`
+`npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
