@@ -39,8 +39,8 @@ const Sider = ({ disclosure }) => {
         },
         {
             icon: BsCardText,
-            title: "Settings",
-            link: "/admin/settings"
+            title: "Components",
+            link: "/admin/components"
         }
     ]
 
@@ -56,7 +56,6 @@ const Sider = ({ disclosure }) => {
             overflowX="hidden"
             overflowY="auto"
             bg="white"
-            borderRightWidth="1px"
             w="280px"
             {...props}
         >

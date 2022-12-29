@@ -10,10 +10,6 @@ const AdminLayout = ({ children }) => {
   return (
     <Box
       as="section"
-      bg="gray.50"
-      _dark={{
-        bg: "gray.700",
-      }}
       minH="100vh"
     >
       <Sider disclosure={sidebar} />

@@ -6,7 +6,7 @@ import {
 import ErrorPage from "./error";
 import Dashboard from "../../views/admin/Dashboard"
 import AdminLayout from '../../components/BasicUI/AdminLayout';
-import Settings from '../../views/admin/Settings';
+import Components from '../../views/admin/Components';
 import ClientLayout from '../../components/BasicUI/ClientLayout';
 
 const router = createBrowserRouter([
@@ -31,8 +31,8 @@ const router = createBrowserRouter([
                 element: <Dashboard />,
             },
             {
-                path: "settings",
-                element: <Settings />
+                path: "components",
+                element: <Components />
             }
         ]
     },

@@ -1,7 +1,7 @@
-import { Avatar, Flex, Icon, IconButton, Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
+import { Avatar, Flex, Heading, Icon, IconButton, Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import React from 'react'
 import { FaBell } from 'react-icons/fa'
-import {FiMenu, FiSearch} from "react-icons/fi"
+import { FiMenu, FiSearch } from "react-icons/fi"
 
 const Header = ({ disclosure }) => {
     return (
@@ -15,8 +15,6 @@ const Header = ({ disclosure }) => {
             _dark={{
                 bg: "gray.800",
             }}
-            borderBottomWidth="1px"
-            borderColor="blackAlpha.300"
             h="14"
         >
             <IconButton
@@ -29,21 +27,26 @@ const Header = ({ disclosure }) => {
                 icon={<FiMenu />}
                 size="sm"
             />
-            <InputGroup
-                w="96"
-                display={{
-                    base: "none",
-                    md: "flex",
-                }}
-            >
-                <InputLeftElement color="gray.500">
-                    <FiSearch />
-                </InputLeftElement>
-                <Input placeholder="Search for articles..." />
-            </InputGroup>
 
-            <Flex align="center">
-                <Icon color="gray.500" as={FaBell} cursor="pointer" />
+
+
+            <Heading>Dashboard</Heading>
+
+            <Flex align={"center"}>
+
+                <InputGroup
+                    w="96"
+                    display={{
+                        base: "none",
+                        md: "flex",
+                    }}
+                >
+                    <InputLeftElement color="gray.500">
+                        <FiSearch />
+                    </InputLeftElement>
+                    <Input placeholder="Search for articles..." />
+                </InputGroup>
+
                 <Avatar
                     ml="4"
                     size="sm"
