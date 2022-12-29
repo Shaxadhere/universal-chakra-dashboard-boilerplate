@@ -20,7 +20,7 @@ const AdminLayout = ({ children }) => {
       <Box
         ml={{
           base: 0,
-          md: 60,
+          md: "280px",
         }}
         transition=".3s ease"
       >

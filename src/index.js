@@ -3,25 +3,27 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import AppRouter from './config/routes';
+import "@fontsource/lato";
 import './index.css';
+import appColors from './config/constants/appColors';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const colors = {
-  primaryText: "#3C3C3D",
-  secondaryText: "#9D9DA0",
-  headingText: "#383839",
-  primaryFill: "#166ceb",
-  secondaryFill: "#f3f4fa",
-  danger: "#ae0000",
-  success: "green",
-  warning: "yellow",
-  info: "blue",
+  primaryText: appColors.dark,
+  secondaryText: appColors.secondaryText,
+  headingText: appColors.dark,
+  primaryFill: appColors.primary,
+  secondaryFill: appColors.secondary,
+  danger: appColors.danger,
+  success: appColors.success,
+  warning: appColors.warning,
+  info: appColors.primary,
 };
 
 const fonts = {
-  heading: `'Montserrat', sans-serif`,
-  body: `'Montserrat', sans-serif`,
+  heading: `'Lato', sans-serif`,
+  body: `'Lato', sans-serif`,
 }
 
 const config = {

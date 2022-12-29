@@ -1,19 +1,20 @@
 import { Box, Drawer, DrawerContent, DrawerOverlay, Flex, Text, Icon } from '@chakra-ui/react';
 import React from 'react'
 import { BsCardText, BsGrid } from "react-icons/bs"
+import {HiOutlineBriefcase, HiOutlineHome } from "react-icons/hi"
 import NavItem from './NavItem';
 
 const Sider = ({ disclosure }) => {
 
     const menuList = [
         {
-            icon: BsGrid,
+            icon: HiOutlineHome,
             title: "Home",
             link: "/admin"
         },
         {
-            icon: BsCardText,
-            title: "Articles",
+            icon: HiOutlineBriefcase,
+            title: "Courses",
             link: "/admin/articles"
         },
         {
@@ -56,7 +57,7 @@ const Sider = ({ disclosure }) => {
             overflowY="auto"
             bg="white"
             borderRightWidth="1px"
-            w="60"
+            w="280px"
             {...props}
         >
             <Flex px="4" py="5" align="center">

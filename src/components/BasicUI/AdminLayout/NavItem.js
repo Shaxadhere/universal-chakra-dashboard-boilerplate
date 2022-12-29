@@ -1,6 +1,7 @@
 import { Flex, Icon } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import appColors from "../../../config/constants/appColors";
 
 const NavItem = ({ icon, link = "#", title, ...rest }) => {
     return (
@@ -12,10 +13,10 @@ const NavItem = ({ icon, link = "#", title, ...rest }) => {
             rounded="md"
             py="3"
             cursor="pointer"
-            color="primaryText"
+            color={appColors.gray}
             _hover={{
                 bg: "secondaryFill",
-                color: "secondaryText",
+                color: "primaryText",
             }}
             role="group"
             fontWeight="semibold"
@@ -26,7 +27,7 @@ const NavItem = ({ icon, link = "#", title, ...rest }) => {
             {icon && (
                 <Icon
                     mr="2"
-                    boxSize="4"
+                    boxSize="5"
                     _groupHover={{
                         color: "primaryText",
                     }}
